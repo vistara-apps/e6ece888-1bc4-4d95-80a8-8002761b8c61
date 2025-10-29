@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: hsl(240, 10%, 4%);
+  --surface: hsl(240, 10%, 8%);
+  --primary: hsl(43, 96%, 50%);
+  --accent: hsl(43, 96%, 60%);
+  --success: hsl(140, 70%, 45%);
+  --danger: hsl(0, 70%, 45%);
+  --text-primary: hsl(0, 0%, 98%);
+  --text-secondary: hsl(240, 5%, 65%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+@layer utilities {
+  .transition-custom {
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
